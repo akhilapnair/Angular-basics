@@ -3,9 +3,10 @@ import { FormsModule } from '@angular/forms';
 import { IProduct } from './product';
 
 @Component({
+    moduleId:module.id,
     selector: 'pm-products',
-    templateUrl: 'app/products/product-list.component.html',
-    styleUrls: ['app/products/product-list.component.css']
+    templateUrl: 'product-list.component.html',
+    styleUrls: ['product-list.component.css']
 })
 export class ProductListComponent {
     pageTitle: string = 'Product List!';
