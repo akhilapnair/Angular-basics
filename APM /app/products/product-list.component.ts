@@ -48,4 +48,8 @@ export class ProductListComponent {
     toggleImage():void {
         this.showImage = !this.showImage;
     }
+    onRatingClicked(message:string) {
+        this.pageTitle = 'ProductList:'+message;
+
+    }
  }
