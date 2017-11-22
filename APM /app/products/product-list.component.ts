@@ -4,9 +4,10 @@ import { IProduct } from './product';
 import { StarComponent } from '../shared/star.component';
 
 @Component({
+    moduleId:module.id,
     selector: 'pm-products',
-    templateUrl: 'app/products/product-list.component.html',
-    styleUrls: ['app/products/product-list.component.css']
+    templateUrl: 'product-list.component.html',
+    styleUrls: ['product-list.component.css']
 })
 export class ProductListComponent {
     pageTitle: string = 'Product List!';

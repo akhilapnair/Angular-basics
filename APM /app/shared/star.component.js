@@ -10,12 +10,17 @@ var core_1 = require("@angular/core");
 var StarComponent = (function () {
     function StarComponent() {
     }
+    StarComponent.prototype.ngOnChanges = function () {
+        this.starWidth = this.rating * 86;
+    };
     return StarComponent;
 }());
 StarComponent = __decorate([
     core_1.Component({
+        moduleId: module.id,
         selector: 'ai-star',
-        templateUrl: 'star.component.html'
+        templateUrl: 'star.component.html',
+        styleUrls: ['star.component.css']
     })
 ], StarComponent);
 exports.StarComponent = StarComponent;
