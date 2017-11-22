@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IProduct } from './product';
+import { StarComponent } from '../shared/star.component';
 
 @Component({
     selector: 'pm-products',
