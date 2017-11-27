@@ -10,6 +10,9 @@ var core_1 = require("@angular/core");
 var ProductService = (function () {
     function ProductService() {
     }
+    ProductService.prototype.getProduct = function () {
+        return;
+    };
     return ProductService;
 }());
 ProductService = __decorate([
