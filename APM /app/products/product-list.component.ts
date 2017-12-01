@@ -11,15 +11,19 @@ import { ProductService } from './product.service';
     styleUrls: ['product-list.component.css']
 })
 export class ProductListComponent {
-    constructor(public p_service: ProductService) {
-
-    }
     pageTitle: string = 'Product List!';
     imageWidth:number = 50;
     imageMargin:number = 50;
     showImage:boolean = false;
     listFilter:string;
     products:IProduct[];
+    constructor(public p_service: ProductService) {
+
+    }
+    ngOnInit() {
+        this.products = this.p_service.getProduct();
+    }
+   
     toggleImage():void {
         this.showImage = !this.showImage;
     }

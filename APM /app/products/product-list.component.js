@@ -19,6 +19,9 @@ var ProductListComponent = (function () {
         this.imageMargin = 50;
         this.showImage = false;
     }
+    ProductListComponent.prototype.ngOnInit = function () {
+        this.products = this.p_service.getProduct();
+    };
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
     };
