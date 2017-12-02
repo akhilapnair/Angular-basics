@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
+require("rxjs/add/operator/catch");
 var ProductService = (function () {
     function ProductService(_http) {
         this._http = _http;
@@ -20,6 +21,7 @@ var ProductService = (function () {
     ProductService.prototype.getProduct = function () {
         return this._http.get(this.productUrl)
             .map(function (response) { return response.json(); });
+        // .catch(this.handleError);
     };
     return ProductService;
 }());
@@ -28,4 +30,7 @@ ProductService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], ProductService);
 exports.ProductService = ProductService;
+// private handleError(error:Response) {
+//     console.error(error);
+// } 
 //# sourceMappingURL=product.service.js.map

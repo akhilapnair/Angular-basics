@@ -26,9 +26,7 @@ export class ProductListComponent {
         .subscribe(
             product => this.products = product,
             error => this.errorMessage = <any>error);
-        
     }
-   
     toggleImage():void {
         this.showImage = !this.showImage;
     }
