@@ -6,9 +6,9 @@ import { ProductListComponent } from './products/product-list.component';
 // import { ProductModule } from './products/product.module';
 import { ProductFilterPipe } from './products/product-filter-pipe';
 import { StarComponent } from './shared/star.component';
-
+import { HttpModule } from '@angular/http';
 @NgModule({
-  imports: [ BrowserModule,FormsModule ],
+  imports: [ BrowserModule,FormsModule,HttpModule ],
   declarations: [ AppComponent, ProductListComponent, ProductFilterPipe ,StarComponent],
   bootstrap: [ AppComponent ]
 })

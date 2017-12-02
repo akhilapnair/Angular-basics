@@ -17,11 +17,16 @@ export class ProductListComponent {
     showImage:boolean = false;
     listFilter:string;
     products:IProduct[];
+    errorMessage:any;
     constructor(public p_service: ProductService) {
 
     }
     ngOnInit() {
-        this.products = this.p_service.getProduct();
+        this.p_service.getProduct()
+        .subscribe(
+            product => this.products = product,
+            error => this.errorMessage = <any>error);
+        
     }
    
     toggleImage():void {
