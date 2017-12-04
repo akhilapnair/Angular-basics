@@ -13,8 +13,11 @@ var app_component_1 = require("./app.component");
 var product_list_component_1 = require("./products/product-list.component");
 // import { ProductModule } from './products/product.module';
 var product_filter_pipe_1 = require("./products/product-filter-pipe");
+var welcome_component_1 = require("./home/welcome.component");
+var productdetail_component_1 = require("./products/productdetail.component");
 var star_component_1 = require("./shared/star.component");
 var http_1 = require("@angular/http");
+var router_1 = require("@angular/router");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,8 +25,12 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent],
+        imports: [platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            http_1.HttpModule,
+            router_1.RouterModule],
+        declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent,
+            productdetail_component_1.ProductDetailComponent, welcome_component_1.WelcomeComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
