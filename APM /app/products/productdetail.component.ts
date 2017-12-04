@@ -6,7 +6,7 @@ import { StarComponent } from '../shared/star.component';
 import { ProductService } from './product.service';
 
 @Component({
-    moduleId:module.id,
+    moduleId: module.id,
     selector: 'pm-productsdetail',
     templateUrl: 'productdetail.component.html',
     // styleUrls: ['productdetail.component.css']

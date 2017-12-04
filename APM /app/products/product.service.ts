@@ -17,3 +17,4 @@ getProduct(): Observable <IProduct[]> {
 // private handleError(error:Response) {
 //     console.error(error);
 // }
+}

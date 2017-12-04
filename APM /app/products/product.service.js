@@ -30,7 +30,4 @@ ProductService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], ProductService);
 exports.ProductService = ProductService;
-// private handleError(error:Response) {
-//     console.error(error);
-// } 
 //# sourceMappingURL=product.service.js.map

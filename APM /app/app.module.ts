@@ -14,9 +14,20 @@ import { RouterModule } from '@angular/router';
   imports: [ BrowserModule,
              FormsModule,
              HttpModule,
-             RouterModule ],
-  declarations: [ AppComponent, ProductListComponent, ProductFilterPipe ,StarComponent,
-                  ProductDetailComponent, WelcomeComponent],
+             RouterModule.forRoot([
+               { path: 'product', component : ProductListComponent },
+               { path: 'product/:id', component : ProductDetailComponent },
+               { path: 'welcome', component : WelcomeComponent },
+               { path: '', redirectTo : '/welcome',pathMatch: 'full' },
+               { path: '**', redirectTo : '/welcome',pathMatch: 'full' }
+            ])
+          ],
+  declarations: [ AppComponent,
+                  ProductListComponent,
+                  ProductFilterPipe ,
+                  StarComponent,
+                  ProductDetailComponent,
+                  WelcomeComponent],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

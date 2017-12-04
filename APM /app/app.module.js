@@ -28,9 +28,20 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule,
             forms_1.FormsModule,
             http_1.HttpModule,
-            router_1.RouterModule],
-        declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent,
-            productdetail_component_1.ProductDetailComponent, welcome_component_1.WelcomeComponent],
+            router_1.RouterModule.forRoot([
+                { path: 'product', component: product_list_component_1.ProductListComponent },
+                { path: 'product/:id', component: productdetail_component_1.ProductDetailComponent },
+                { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+                { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+                { path: '**', redirectTo: '/welcome', pathMatch: 'full' }
+            ])
+        ],
+        declarations: [app_component_1.AppComponent,
+            product_list_component_1.ProductListComponent,
+            product_filter_pipe_1.ProductFilterPipe,
+            star_component_1.StarComponent,
+            productdetail_component_1.ProductDetailComponent,
+            welcome_component_1.WelcomeComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
