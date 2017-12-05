@@ -10,13 +10,17 @@ import { ProductDetailComponent } from './products/productdetail.component';
 import { StarComponent } from './shared/star.component';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import {  CanActivate} from '@angular/router';
+import { ProductDetailsGuradService } from './products/productdetailsgurad.service';
 @NgModule({
   imports: [ BrowserModule,
              FormsModule,
              HttpModule,
              RouterModule.forRoot([
                { path: 'product', component : ProductListComponent },
-               { path: 'product/:id', component : ProductDetailComponent },
+               { path: 'product/:id',
+                canActivate:[ProductDetailsGuradService],
+                component : ProductDetailComponent },
                { path: 'welcome', component : WelcomeComponent },
                { path: '', redirectTo : '/welcome',pathMatch: 'full' },
                { path: '**', redirectTo : '/welcome',pathMatch: 'full' }
@@ -28,6 +32,7 @@ import { RouterModule } from '@angular/router';
                   StarComponent,
                   ProductDetailComponent,
                   WelcomeComponent],
+  providers:[ProductDetailsGuradService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
