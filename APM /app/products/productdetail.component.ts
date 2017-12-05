@@ -1,9 +1,7 @@
 
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component,OnInit } from '@angular/core';
 import { IProduct } from './product';
-import { StarComponent } from '../shared/star.component';
-import { ProductService } from './product.service';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
     moduleId: module.id,
@@ -11,7 +9,19 @@ import { ProductService } from './product.service';
     templateUrl: 'productdetail.component.html',
     // styleUrls: ['productdetail.component.css']
 })
-export class ProductDetailComponent {
+export class ProductDetailComponent implements OnInit {
     pageTitle: string = 'Product Detail!';
-  
+    product:IProduct;
+    constructor(private _route: ActivatedRoute,
+                 private _router: Router ) {
+
+
+    }
+    ngOnInit(): void {
+        let id = this._route.snapshot.params['id'];
+        this.pageTitle = id;
+    }
+    onClick(): void {
+        this._router.navigate(['/product']);
+    }
  }
