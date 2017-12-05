@@ -17,13 +17,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'pm-app',
-        template: "\n    <nav class='navbar navbar-default'>\n    <div class='container-fluid'>\n    <a class='navbar-brand'>{{pageTitle}}</a>\n    <ul class='nav navbar-nav'>\n    <li><a [routerLink]=\"['/welcome']\" routerLinkActive=\"active\">Home</a></li>\n    <li><a [routerLink]=\"['/product']\" routerLinkActive=\"active\">Product List</a></li>\n    </ul>\n    </div>\n    </nav>\n    <div class = 'container'>\n    <router-outlet></router-outlet>\n    </div>\n"
-        //    <ul>
-        //    <li><a [routerLink] = "['/welcome']">Home</a></li>
-        //    <li><a [routerLink] = "['/product']">Product List</a</li>
-        //    </ul>
-        // <pm-products></pm-products>
-        ,
+        template: "\n    <nav class='navbar navbar-default'>\n    <div class='container-fluid'>\n    <a class='navbar-brand'>{{pageTitle}}</a>\n    <ul class='nav navbar-nav'>\n    <li><a [routerLink]=\"['/welcome']\" routerLinkActive=\"active\">Home</a></li>\n    <li><a [routerLink]=\"['/product']\" routerLinkActive=\"active\">Product List</a></li>\n    </ul>\n    </div>\n    </nav>\n    <div class = 'container'>\n    <router-outlet></router-outlet>\n    </div>\n",
         providers: [product_service_1.ProductService]
     })
 ], AppComponent);

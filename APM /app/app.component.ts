@@ -15,13 +15,7 @@ import { ProductService } from './products/product.service';
     <div class = 'container'>
     <router-outlet></router-outlet>
     </div>
-`
-    //    <ul>
-    //    <li><a [routerLink] = "['/welcome']">Home</a></li>
-    //    <li><a [routerLink] = "['/product']">Product List</a</li>
-    //    </ul>
-        // <pm-products></pm-products>
-    ,
+`   ,
     providers: [ProductService]
 })
 export class AppComponent {
