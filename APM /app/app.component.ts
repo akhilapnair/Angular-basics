@@ -5,7 +5,7 @@ import { ProductService } from './products/product.service';
     template: `
     <nav class='navbar navbar-default'>
     <div class='container-fluid'>
-    <a class='navbar-brand'>{{pageTitle}}</a>
+    <a class='navbar-brand'></a>
     <ul class='nav navbar-nav'>
     <li><a [routerLink]="['/welcome']" routerLinkActive="active">Home</a></li>
     <li><a [routerLink]="['/product']" routerLinkActive="active">Product List</a></li>
